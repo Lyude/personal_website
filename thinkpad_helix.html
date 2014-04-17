@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Lyude"/>
+
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<style>
+		table, td, tr, th {
+			border: 1px;
+			border-style: solid;
+			border-color: black;
+			border-collapse: collapse;
+			border-spacing: 10px 50px;
+		}
+
+		td:nth-child(2) {
+			text-align: center;
+		}
+
+		td:nth-child(3) {
+			vertical-align: center;
+		}
+
+		tr:nth-child(1) {
+			background-color: #4A93B8;
+		}
+
+		table#thinkpad_support caption {
+			text-align: left;
+		}
+
+		table#thinkpad_acpi_support caption {
+			font-size: 125%;
+		}
+
+		.feat_works {
+			background-color: LimeGreen;
+		}
+		.feat_mostly {
+			background-color: Yellow;
+		}
+		.feat_missing {
+			background-color: Red;
+		}
+	</style>
+	<title>lyude.net</title>
+</head>
+
+<body>
+	<div class="navigation">
+		<a href="index.html"><img src="logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
+		<ul>
+			<li><a href="about.html" class="navigation">About Me</a></li>
+			<li><a href="work.html" class="navigation">Work Experience</a></li>
+			<li><a href="projects.html" class="navigation">Projects</a></li>
+			<li><a href="coffee_survey.html" class="navigation">Coffee Survey</a></li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<h1>Linux support for the Lenovo ThinkPad Helix</h1>
+
+		<p>
+			One of my side projects right now is working on adding support for the various features of the ThinkPad Helix to Linux based operating systems. As of right now, all of the laptop's basic features work (although a few require patches or other workarounds). Many of the features on it that don't work are extra bells and whistles that, although are pretty awesome, aren't necessarily required for the laptop to work.
+		</p>
+
+		<table id="thinkpad_support">
+			<caption>
+				Legend:<br/>
+				<ul>
+					<li>"<span class="feat_works"><b>Works!</b></span>": everything works flawlessly</li>
+					<li>"<span class="feat_mostly"><b>Mostly</b></span>": works, but certain features might be missing</li>
+					<li>"<span class="feat_missing"><b>Missing</b></span>": support in Linux is currently completely missing</li>
+				</ul>
+			</caption>
+
+			<tr>
+				<th>Feature</th>
+				<th>Status</th>
+				<th>Notes</th>
+			</tr>
+
+			<tr>
+				<td>Keyboard</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Touchpad</td>
+				<td class="feat_mostly">Mostly</td>
+				<td>Lenovo's newest line of ThinkPads feature the latest line of Synaptics touchpads, which use primarily use a different protocol for communicating with the drivers then the previous ones have. Although they have a fallback mode to communicate via traditional PS/2, however due to a bug with the fallback mode it reports the wrong size for the touchpad causing various clickpad features to act up. A temporary patch for this to make things work until the new method of communication is supported under Linux has been written and is (hopefully) <a href="https://patchwork.kernel.org/patch/3792491/">on it's way to the kernel</a>.</td>
+			</tr>
+
+			<tr>
+				<td>TrackPoint</td>
+				<td class="feat_mostly">Mostly</td>
+				<td>Lenovo's latest line of ThinkPads have ditched the traditional physical buttons for their TrackPoints and have decided to go with having the touchpad emulate a separate set of buttons for the TrackPoint. Up until recently xf86-input-synaptics had no support for this, but recently <a href="http://cgit.freedesktop.org/xorg/driver/xf86-input-synaptics/commit/?id=b40a5255fe73f7f95c8ff7145dd91605f3430119">with the work of me and a couple other xorg developers</a>, support for this has been added and should be featured in the next release of the driver.</td>
+			</tr>
+
+			<tr>
+				<td>Touchscreen</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Stylus</td>
+				<td class="feat_works">Works!</td>
+				<td>Support for touch screen + stylus (doing gestures with your hand while using the pen, disabling the touchscreen when the pen is in proximity of the screen and no gestures are being made, etc.) still needs to be implemented, but as far as the stylus itself goes everything works perfectly.</td>
+			</tr>
+
+			<tr>
+				<td>Front Camera</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Rear Camera</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Sound</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Graphics Card (Intel HD4000)</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Ambient Light Sensor</td>
+				<td class="feat_works">Works!</td>
+				<td rowspan="4">Requires a <a href="https://patchwork.kernel.org/patch/3933991/">kernel patch</a> in order for the sensors to begin sending data.</td>
+			</tr>
+
+			<tr>
+				<td>Accelerometer</td>
+				<td class="feat_works">Works!</td>
+			</tr>
+
+			<tr>
+				<td>Gyroscope</td>
+				<td class="feat_works">Works!</td>
+			</tr>
+
+			<tr>
+				<td>Magnetometer</td>
+				<td class="feat_works">Works!</td>
+			</tr>
+
+			<tr>
+				<td>Wi-Fi</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Bluetooth</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>NFC</td>
+				<td class="feat_missing">Missing</td>
+				<td>Support in general for NFC on Linux is almost non-existent right now, and is in the very early stages of development. The NFC used on the Helix is also developed by Broadcom, so we're on our own with getting support for it.</td>
+			</tr>
+
+			<tr>
+				<td>Keyboard Dock</td>
+				<td class="feat_mostly">Mostly</td>
+				<td>Surprisingly, docking and undocking the tablet from it's keyboard dock brings no issues with Linux, and Linux handles detection of the mounting and unmounting perfectly, along with the hotplugging of the secondary battery in the tablet. However, the power LED does not reset properly when the machine comes out of standby. The only fix for this so far seems to be undocking the tablet and docking it again. Additionally, the dock seems to occasionally lose connection to the tablet for a split second when the fan changes speeds, but I have a very strong feeling this is the fault of the firmware and not Linux.</td>
+			</tr>
+
+			<tr>
+				<td>Backlight</td>
+				<td class="feat_works">Works!</td>
+				<td><a href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=997dd7fe546b33a4f86adc635c5ffc0e79966cf2">Patched in version 1.15 of the kernel</a></td>
+			</tr>
+		</table>
+
+		<br/>
+
+		<table id="thinkpad_acpi_support">
+			<caption>ThinkPad ACPI specific features (thinkpad-acpi)</caption>
+
+			<tr>
+				<th>Feature</th>
+				<th>Status</th>
+				<th>Notes</th>
+			</tr>
+
+			<tr>
+				<td>
+					Charge control<br/>
+					<span style="font-size: 75%">(charging start/stop thresholds, charge inhibiting, etc.)</span>
+				</td>
+				<td class="feat_mostly">Mostly</td>
+				<td>Limiting the charge for the primary tablet battery works perfectly, but the second battery doesn't seem to respond at all when trying to limit how much it's allowed to charge.</td>
+			</tr>
+
+			<tr>
+				<td>Manual fan control and RPM monitoring</td>
+				<td class="feat_works">Works!</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Extra buttons</td>
+				<td class="feat_mostly">Mostly</td>
+				<td>Last row of hot keys (F9-F12 without Fn held down) do not work as of now, but patches to add support for them have been made and should be merged soon</td>
+			</tr>
+
+			<tr>
+				<td>LED control</td>
+				<td class="feat_mostly">Mostly</td>
+				<td>Control of the tablet's power LED works fine, but there currently seems to be no way to control the keyboard dock's LED</td>
+			</tr>
+		</table>
+
+		<p>
+			My eventual plan is to work with various developers and patch up support until mostly everything on that chart is listed as working.
+		</p>
+	</div>
+	<div class="foot">
+		<p>
+			Copyright ©2014 <a href="mailto:thatslyude@gmail.com">Stephen "Lyude" Chandler Paul</a>
+		</p>
+	</div>
+</body>
