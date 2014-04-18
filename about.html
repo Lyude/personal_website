@@ -1,25 +1,14 @@
+---
+title: About
+---
 <!DOCTYPE HTML>
 
-<html>
 <head>
-	<meta charset="UTF-8"/>
-	<meta name="author" content="Lyude"/>
-
-	<link href="style.css" rel="stylesheet" type="text/css"/>
-
-	<title>lyude.net</title>
+	{% include header.html %}
 </head>
 
 <body>
-	<div class="navigation">
-		<a href="index.html"><img src="logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
-		<ul>
-			<li><a href="about.html" class="navigation">About Me</a></li>
-			<li><a href="work.html" class="navigation">Work Experience</a></li>
-			<li><a href="projects.html" class="navigation">Projects</a></li>
-			<li><a href="coffee_survey.html" class="navigation">Coffee Survey</a></li>
-		</ul>
-	</div>
+	{% include navigation.html %}
 
 	<div class="content">
 		<h1>About Me</h1>
@@ -39,10 +28,5 @@
 			Although I'll usually respond on all of my messengers, the most reliable method is by e-mail, since almost all of my devices will go off if I receive a message there. You can send me an e-mail at <a href="mailto:thatslyude@gmail.com">thatslyude@gmail.com</a>.
 		</p>
 	</div>
-
-	<div class="foot">
-		<p>
-			Copyright ©2014 <a href="mailto:thatslyude@gmail.com">Stephen "Lyude" Chandler Paul</a>
-		</p>
-	</div>
+	{% include footer.html %}
 </body>

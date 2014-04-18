@@ -1,11 +1,12 @@
+---
+title: Projects
+---
 <!DOCTYPE HTML>
 
 <html>
 <head>
-	<meta charset="UTF-8"/>
-	<meta name="author" content="Lyude"/>
+	{% include header.html %}
 
-	<link href="style.css" rel="stylesheet" type="text/css"/>
 	<style>
 		table, td, tr, th {
 			border: 1px;
@@ -45,19 +46,10 @@
 			background-color: Red;
 		}
 	</style>
-	<title>lyude.net</title>
 </head>
 
 <body>
-	<div class="navigation">
-		<a href="index.html"><img src="logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
-		<ul>
-			<li><a href="about.html" class="navigation">About Me</a></li>
-			<li><a href="work.html" class="navigation">Work Experience</a></li>
-			<li><a href="projects.html" class="navigation">Projects</a></li>
-			<li><a href="coffee_survey.html" class="navigation">Coffee Survey</a></li>
-		</ul>
-	</div>
+	{% include navigation.html %}
 
 	<div class="content">
 		<h1>Projects</h1>
@@ -72,10 +64,7 @@
 			<dd>A side project of mine to add support for various features of the ThinkPad Helix to Linux based operating systems</dd>
 		</dl>
 	</div>
-	<div class="foot">
-		<p>
-			Copyright ©2014 <a href="mailto:thatslyude@gmail.com">Stephen "Lyude" Chandler Paul</a>
-		</p>
-	</div>
+
+	{% include footer.html %}
 </body>
 </html>

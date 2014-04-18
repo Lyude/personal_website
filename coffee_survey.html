@@ -1,13 +1,11 @@
+---
+title: Coffee Survey
+---
 <!DOCTYPE HTML>
 
 <html>
 <head>
-	<meta charset="UTF-8"/>
-	<meta name="author" content="Lyude"/>
-
-	<link href="style.css" rel="stylesheet" type="text/css"/>
-
-	<title>lyude.net</title>
+	{% include header.html %}
 
 	<style>
 		input#middle_initial {
@@ -27,15 +25,7 @@
 </head>
 
 <body>
-	<div class="navigation">
-		<a href="index.html"><img src="logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
-		<ul>
-			<li><a href="about.html" class="navigation">About Me</a></li>
-			<li><a href="work.html" class="navigation">Work Experience</a></li>
-			<li><a href="projects.html" class="navigation">Projects</a></li>
-			<li><a href="coffee_survey.html" class="navigation">Coffee Survey</a></li>
-		</ul>
-	</div>
+	{% include navigation.html %}
 
 	<div class="content">
 		<h1>Coffee Survey</h1>
@@ -64,4 +54,6 @@
 			</p>
 		</form>
 	</div>
+
+	{% include footer.html %}
 </body>

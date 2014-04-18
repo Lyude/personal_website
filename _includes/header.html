@@ -1,0 +1,9 @@
+<meta charset="UTF-8"/>
+<meta name="author" content="Lyude"/>
+
+<link href="style.css" rel="stylesheet" type="text/css"/>
+{% if page.title == null %}
+	<title>lyude.net</title>
+{% else %}
+	<title>lyude.net - {{ page.title }}</title>
+{% endif %}

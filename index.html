@@ -1,10 +1,10 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="author" content="Lyude"/>
-	<title>lyude.net</title>
+	{% include header.html %}
 
-	<link href="style.css" rel="stylesheet" type="text/css"/>	
 	<!--
 	There is no way to vertically center something that is built into CSS. Sadly
 	this means you have to use a weird hack like this:
@@ -39,19 +39,10 @@
 		<img class="logo" src=logo.svg alt="lyude.net logo" />
 
 		<div style="display: inline-block">
-			<ul>
-				<li><a href="about.html" class="navigation">About Me</a></li>
-				<li><a href="work.html" class="navigation">Work Experience</a></li>
-				<li><a href="projects.html" class="navigation">Projects</a></li>
-				<li><a href="coffee_survey.html" class="navigation">Coffee Survey</a></li>
-			</ul>
+			{% include navigation.html links_only=true %}
 		</div>
 	</div>
 
-	<div class="foot">
-		<p>
-			Copyright ©2014 <a href="mailto:thatslyude@gmail.com">Stephen "Lyude" Chandler Paul</a>
-		</p>
-	</div>
+	{% include footer.html %}
 </body>
 
