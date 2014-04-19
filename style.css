@@ -30,7 +30,7 @@ div.navigation {
 	font-weight: bold;
 }
 
-div.content {
+div#content {
 	clear: left;
 	background-color: #94DBFF;
 	margin-left: 10px;
