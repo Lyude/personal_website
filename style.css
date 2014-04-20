@@ -10,10 +10,6 @@ li:before {
 	padding-right: 5px;
 }
 
-div.content li {
-	text-indent: -20px;
-}
-
 a.navigation {
 	text-decoration: none;
 }
