@@ -1,59 +1,29 @@
 ---
 title: Coffee Survey
+layout: default
 ---
-<!DOCTYPE HTML>
+<h1>Coffee Survey</h1>
 
-<html>
-<head>
-	{% include header.html %}
+<h2>What is this?</h2>
+<p>
+	For my statistics class, my professor has asked that we do a survey for our final project. This is a silly page to gather the results and send them to my e-mail address. If I get the time, I'll probably replace this with something proper that stores the results in a database.
+</p>
 
-	<style>
-		input#middle_initial {
-			width: 30px;
-		}
-		input#coffee_count {
-			width: 50px;
-		}
-		.req_form_indicator {
-			font-style: bold;
-			color: red;
-		}
-		p#submit_container {
-			text-align: center;
-		}
-	</style>
-</head>
+<form action="mailto:thatslyude@gmail.com?Subject=Survey%20Response" method="post" enctype="text/plain">
+	<p>
+		<label for="first_name">First Name<span class="req_form_indicator">*</span>: </label>
+		<input id="first_name" name="firstname" type="text" required autofocus>
+		<label for="mi"> MI: </label>
+		<input id="mi" name="mi" type="text" maxlength="1" style="width: 30px">
+		<label for="last_name"> Last<span class="req_form_indicator">*</span>: </label>
+		<input id="last_name" name="last_name" type="text" required>
+		<br>
 
-<body>
-	{% include navigation.html %}
+		<label for="coffee_count">How many cups of coffee do you drink per day?<span class="req_form_indicator">*</span></label>
+		<input id="coffee_count" name="coffee_count" type="number" min="0" required style="width: 50px">
+	</p>
 
-	<div id="content">
-		<h1>Coffee Survey</h1>
-
-		<h2>What is this?</h2>
-		<p>
-			For my statistics class, my professor has asked that we do a survey for our final project. This is a silly page to gather the results and send them to my e-mail address. If I get the time, I'll probably replace this with something proper that stores the results in a database.
-		</p>
-
-		<form action="mailto:thatslyude@gmail.com?Subject=Survey%20Response" method="post" enctype="text/plain">
-			<p>
-				<label for="first_name">First Name<span class="req_form_indicator">*</span>: </label>
-				<input id="first_name" name="firstname" type="text" required autofocus>
-				<label for="middle_initial"> MI: </label>
-				<input id="middle_initial" name="middle_initial" type="text" maxlength="1">
-				<label for="last_name"> Last<span class="req_form_indicator">*</span>: </label>
-				<input id="last_name" name="last_name" type="text" required>
-				<br>
-
-				<label for="coffee_count">How many cups of coffee do you drink per day?<span class="req_form_indicator">*</span></label>
-				<input id="coffee_count" name="coffee_count" type="number" min="0" required>
-			</p>
-
-			<p id="submit_container">
-				<input type="Submit" value="Submit">
-			</p>
-		</form>
-	</div>
-
-	{% include footer.html %}
-</body>
+	<p style="text-align: center">
+		<input type="Submit" value="Submit">
+	</p>
+</form>

@@ -1,5 +1,5 @@
 - name: About Me
-  page: about_me.html
+  page: about.html
 
 - name: Work Experience
   page: work.html

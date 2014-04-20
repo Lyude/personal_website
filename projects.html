@@ -1,70 +1,15 @@
 ---
 title: Projects
+layout: default
 ---
-<!DOCTYPE HTML>
+<h1>Projects</h1>
+<dl>
+	<dt><a href="https://github.com/Lyude1337/SquirrelChat">SquirrelChat</a></dt>
+	<dd>An work in progress IRC client that is mostly discontinued at this point unless I have the time to work on a project for fun again. Written in C using the GTK+3 toolkit. Needs an overhaul of some of the code (specifically the networking code) to make better use of glib and GIO, along with implementing some necessities like a send buffer. This project mostly served however, as a way to teach myself how managing a large project would work, along with teaching myself how to program fluently in C and the GTK+ toolkit.</dd>
 
-<html>
-<head>
-	{% include header.html %}
+	<dt><a href="resources/wayland_gsoc_2014_proposal.pdf">Google Summer of Code 2014 Proposal</a></dt>
+	<dd>A proposal for a potential project I may be working on during <a href="http://www.google-melange.com/gsoc/homepage/google/gsoc2014">Google Summer of Code 2014</a>, regarding adding support for Wacom tablet input support to <a href="http://wayland.freedesktop.org">Wayland</a>.</dd>
 
-	<style>
-		table, td, tr, th {
-			border: 1px;
-			border-style: solid;
-			border-color: black;
-			border-collapse: collapse;
-			border-spacing: 10px 50px;
-		}
-
-		td:nth-child(2) {
-			text-align: center;
-		}
-
-		td:nth-child(3) {
-			vertical-align: center;
-		}
-
-		tr:nth-child(1) {
-			background-color: #4A93B8;
-		}
-
-		table#thinkpad_support caption {
-			text-align: left;
-		}
-
-		table#thinkpad_acpi_support caption {
-			font-size: 125%;
-		}
-
-		.feat_works {
-			background-color: LimeGreen;
-		}
-		.feat_mostly {
-			background-color: Yellow;
-		}
-		.feat_missing {
-			background-color: Red;
-		}
-	</style>
-</head>
-
-<body>
-	{% include navigation.html %}
-
-	<div id="content">
-		<h1>Projects</h1>
-		<dl>
-			<dt><a href="https://github.com/Lyude1337/SquirrelChat">SquirrelChat</a></dt>
-			<dd>An work in progress IRC client that is mostly discontinued at this point unless I have the time to work on a project for fun again. Written in C using the GTK+3 toolkit. Needs an overhaul of some of the code (specifically the networking code) to make better use of glib and GIO, along with implementing some necessities like a send buffer. This project mostly served however, as a way to teach myself how managing a large project would work, along with teaching myself how to program fluently in C and the GTK+ toolkit.</dd>
-
-			<dt><a href="resources/wayland_gsoc_2014_proposal.pdf">Google Summer of Code 2014 Proposal</a></dt>
-			<dd>A proposal for a potential project I may be working on during <a href="http://www.google-melange.com/gsoc/homepage/google/gsoc2014">Google Summer of Code 2014</a>, regarding adding support for Wacom tablet input support to <a href="http://wayland.freedesktop.org">Wayland</a>.</dd>
-
-			<dt><a href="thinkpad_helix.html">Linux support for the ThinkPad Helix</a></dt>
-			<dd>A side project of mine to add support for various features of the ThinkPad Helix to Linux based operating systems</dd>
-		</dl>
-	</div>
-
-	{% include footer.html %}
-</body>
-</html>
+	<dt><a href="thinkpad_helix.html">Linux support for the ThinkPad Helix</a></dt>
+	<dd>A side project of mine to add support for various features of the ThinkPad Helix to Linux based operating systems</dd>
+</dl>
