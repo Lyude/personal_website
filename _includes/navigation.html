@@ -1,13 +1,12 @@
 {% if include.links_only == null %}
-<div class="navigation">
-	<a href="index.html"><img src="logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
+	<div class="navigation">
+		<a href="index.html"><img src="logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
 {% endif %}
-	<ul>
-		<li><a href="about.html" class="navigation">About Me</a></li>
-		<li><a href="work.html" class="navigation">Work Experience</a></li>
-		<li><a href="projects.html" class="navigation">Projects</a></li>
-		<li><a href="coffee_survey.html" class="navigation">Coffee Survey</a></li>
-	</ul>
+		<ul>
+		{% for link in site.data.navigation_links %}
+			<li><a href="{{ link.page }}" class="navigation">{{ link.name }}</a></li>
+		{% endfor %}
+		</ul>
 {% if include.links_only == null %}
-</div>
+	</div>
 {% endif %}
