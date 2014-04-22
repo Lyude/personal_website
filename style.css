@@ -38,7 +38,7 @@ div#content_container {
 	width: 928px;
 }
 
-div#content, div#blog_list {
+div#content, div#blog_list, div#social_media {
 	background-color: #94DBFF;
 	padding-left: 25px;
 	padding-right: 25px;
@@ -71,7 +71,7 @@ span.post_date {
 	font-style: italic;
 }
 
-div#blog_list {
+div#blog_list, div#social_media {
 	float: right;
 	clear: right;
 
@@ -83,6 +83,13 @@ div#blog_list {
 
 div#blog_list {
 	clear: right;
+}
+
+div#social_media {
+	text-align: center;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 div#blog_list h1 {
