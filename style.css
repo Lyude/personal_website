@@ -1,7 +1,7 @@
 ul {
 	list-style: none;
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: -40px;
+	margin-right: -40px;
 }
 
 li:before {
