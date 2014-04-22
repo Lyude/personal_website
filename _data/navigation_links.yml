@@ -1,6 +1,9 @@
 - name: About Me
   page: about.html
 
+- name: Blog
+  page: blog_index.html
+
 - name: Work Experience
   page: work.html
 

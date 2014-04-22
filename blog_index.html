@@ -1,0 +1,11 @@
+---
+title: Blog Index
+layout: default
+---
+<div class="box_title_area"><h1>Blog Index</h1></div>
+<ul>
+	{% for post in site.posts %}
+		<li>{{ post.date | date: "%m/%d/%Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
+

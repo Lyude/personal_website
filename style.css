@@ -26,13 +26,24 @@ div.navigation {
 	font-weight: bold;
 }
 
-div#content {
-	clear: left;
+div#content_container {
+	clear: both;
+	margin: 0 auto;
+	/* Because this contains both of of the boxes and keeps them nice and
+	 * snug, this has to be set using the following formula:
+	 * sizeof(div#content) + sizeof(div#blog_list) + (the total padding on
+	 * both boxes) + (the total margins of both boxes) + (the total borders
+	 * of both boxes)
+	 */
+	width: 928px;
+}
+
+div#content, div#blog_list {
 	background-color: #94DBFF;
-	margin-left: 10px;
-	margin-right: 10px;
 	padding-left: 25px;
 	padding-right: 25px;
+
+	margin-top: 7px;
 
 	border: 2px solid;
 	border-radius: 10px;
@@ -41,7 +52,52 @@ div#content {
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
+div#content {
+	float: left;
+
+	margin-left: 10px;
+	margin-right: 5px;
+
+	width: 600px;
+}
+
+span.post_title {
+	text-align: left;
+	font-size: x-large;
+}
+
+span.post_date {
+	font-size: small;
+	font-style: italic;
+}
+
+div#blog_list {
+	float: right;
+	clear: right;
+
+	margin-left: 5px;
+	margin-right: 10px;
+
+	width: 190px;
+}
+
+div#blog_list {
+	clear: right;
+}
+
+div#blog_list h1 {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+}
+div#blog_list dd {
+	font-size: small;
+	margin-left: 5px;
+}
+
 div#footer {
+	clear: both;
+	padding-top: 10px;
 	text-align: center;
 	font-size: 8pt;
 }
