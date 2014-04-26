@@ -151,6 +151,10 @@ div#footer {
 	padding-top: 10px;
 	text-align: center;
 	font-size: 8pt;
+	color: grey;
+}
+div#footer a:visited {
+	color: blue;
 }
 
 div.box_title_area {
