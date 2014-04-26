@@ -6,7 +6,13 @@
 </head>
 
 <body>
-	{% include navigation.html %}
+	<a href="/index.html"><img id=logo src="/logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
+
+	<div id="navigation">
+		{% for link in site.data.navigation_links %}
+			<div class="navigation_button"><a class="navigation_button_text" href="/{{ link.page }}">{{ link.name }}</a></div>
+		{% endfor %}
+	</div>
 
 	<div id="content_container">
 		<div id="content">

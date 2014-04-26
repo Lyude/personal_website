@@ -1,7 +1,8 @@
+@import "fonts.css";
+
 ul {
 	list-style: none;
 	margin-left: -40px;
-	margin-right: -40px;
 }
 
 li:before {
@@ -10,25 +11,68 @@ li:before {
 	padding-right: 5px;
 }
 
-a.navigation {
-	text-decoration: none;
-}
-a.navigation:hover {
-	transition-property: background-color;
-	transition-duration: 0.25s;
-	background-color: White;
-}
-a.navigation:visited {
-	color: blue;
+div#navigation {
+	width: 100%;
+
+	background: #99CCFF;
+
+	height: 62px;
+	text-indent: 70px;
+
+	box-shadow: 0px 0px 5px 3px black;
 }
 
-div.navigation {
-	font-weight: bold;
+div.navigation_button {
+	height: 62px;
+	display: inline-block;
+
+	text-align: center;
+	text-indent: 0px;
+
+	background-color: #3399FF;
+}
+
+a.navigation_button_text {
+	position: relative;
+
+	/* Make the link appear to be in the center of the button */
+	padding-top: 19px;
+
+	padding-left: 10px;
+	padding-right: 10px;
+
+	height: 33px;
+
+	display: inline-block;
+
+	border-bottom: 10px #003366 solid;
+
+	font-family: "Noto Sans";
+}
+
+a.navigation_button_text:link, a.navigation_button_text:visited {
+	color: black;
+}
+
+img#logo {
+	position: absolute;
+}
+
+div#navigation a {
+	text-decoration: none;
+}
+div#navigation a:hover {
+	transition-property: border;
+	transition-duration: 0.25s;
+	border-bottom: 10px #C2E0FF solid;
 }
 
 div#content_container {
 	clear: both;
 	margin: 0 auto;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 0px;
 	/* Because this contains both of of the boxes and keeps them nice and
 	 * snug, this has to be set using the following formula:
 	 * sizeof(div#content) + sizeof(div#blog_list) + (the total padding on
@@ -127,15 +171,10 @@ div.box_title_area>* {
 	margin-top: 5px;
 }
 
-img.logo {
-	float: left;
-	padding-right: 10px;
-	padding-bottom: 5px;
-}
-
 body {
 	background-color: #1A3366;
 	font-family: Arial;
+	margin: 0px; /* Let the content containers handle the margins */
 }
 
 h1,h2,h3 {

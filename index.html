@@ -24,6 +24,7 @@
 			right: 0;
 
 			font-size: 20pt;
+			background-color: #94DBFF;
 		}
 		img.logo {
 			float: left;
@@ -39,7 +40,11 @@
 		<img class="logo" src=logo.svg alt="lyude.net logo" />
 
 		<div style="display: inline-block">
-			{% include navigation.html links_only=true %}
+			<ul>
+				{% for link in site.data.navigation_links %}
+					<li><a href="/{{ link.page }}">{{ link.name }}</a></li>
+				{% endfor %}
+			</ul>
 		</div>
 	</div>
 
