@@ -2,6 +2,9 @@
 <meta name="author" content="Lyude"/>
 
 <link href="/stylesheets/master.css" rel="stylesheet" type="text/css"/>
+{% if page.stylesheet != null %}
+	<link href="/stylesheets/{{ page.stylesheet }}" rel="stylesheet" type="text/css"/>
+{% endif %}
 {% if page.title == null %}
 	<title>lyude.net</title>
 {% else %}
