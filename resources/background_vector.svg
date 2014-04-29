@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="359.76309"
+   height="253.28032"
+   id="background_decoration"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#1a3366"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="170.65998"
+     inkscape:cy="140.60906"
+     inkscape:document-units="px"
+     inkscape:current-layer="birds"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Group of Birds"
+     inkscape:groupmode="layer"
+     id="birds"
+     transform="translate(-8.2693909,-452.70067)">
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 182.02552,553.76602 c 32.71596,-17.42511 40.26613,-58.97763 76.01738,-81.16078 35.75125,-22.18315 51.90594,-25.06846 31.09779,-10.06117 -20.80815,15.00729 -67.11727,75.36437 -102.79796,111.00318 -4.7666,4.761 -8.3161,12.05402 -14.84507,13.71539 -6.5024,1.65461 -13.09594,-2.97971 -19.51538,-4.93157 -44.72062,-13.5975 -111.46252,-47.69447 -132.06646,-47.13693 -20.60393964,0.55754 -13.1344996,-6.56693 26.25731,-7.74753 39.39181,-1.18059 65.47834,35.27044 101.17754,35.11715 5.77702,-0.0248 10.72857,-4.38458 16.32365,-5.82323 6.00168,-1.5432 12.88172,-0.0614 18.3512,-2.97451 z"
+       id="bird_1-2-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="azzaaazzaaa" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.76558703px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 254.73003,626.53921 c 24.46937,-14.37236 28.91931,-46.39764 55.55867,-64.50635 26.63937,-18.10871 38.90442,-20.83104 23.46649,-8.68792 -15.43794,12.14311 -48.93566,59.78868 -75.09187,88.18768 -3.49422,3.79383 -5.9767,9.48564 -10.91786,10.9647 -4.92106,1.47305 -10.11242,-1.86154 -15.08505,-3.1498 -34.6415,-8.97461 -86.78144,-32.92733 -102.52408,-31.84367 -15.74262,1.08366 -10.25632,-4.60425 19.83769,-6.76377 30.09402,-2.1595 51.21084,24.89064 78.51306,23.63471 4.41818,-0.20323 8.06667,-3.69606 12.30059,-4.97498 4.5416,-1.37186 9.85155,-0.45784 13.94236,-2.8606 z"
+       id="bird_1-2-6-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="azzaaazzaaa" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.52198142px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 302.39685,688.76697 c 17.85703,-7.44879 23.82097,-28.67151 43.48896,-38.44385 19.66799,-9.77235 28.20473,-10.4785 16.65452,-3.70146 -11.5502,6.77704 -38.57923,35.86868 -58.87128,52.63695 -2.71083,2.24008 -4.91349,5.85572 -8.38796,6.39848 -3.46032,0.54057 -6.65921,-2.1915 -9.89934,-3.52104 -22.57213,-9.26209 -55.58141,-30.25839 -66.31596,-30.98037 -10.73456,-0.72198 -6.50311,-4.05756 14.02547,-2.73681 20.52858,1.32075 32.29502,21.54406 50.85424,23.21735 3.00334,0.27078 5.79057,-1.75172 8.7688,-2.2246 3.19465,-0.50725 6.69721,0.60063 9.68255,-0.64465 z"
+       id="bird_1-2-6-4-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="azzaaazzaaa" />
+  </g>
+</svg>
