@@ -4,8 +4,8 @@ stylesheet: blog_post.css
 ---
 
 <div class="box_title_area" style="text-align: left">
-	<span class="post_title">{{ page.title }}</span><br/>
-	<span class="post_date">Published by Stephen Chandler "Lyude" Paul on {{ page.date | date: "%A %B %d, %Y" }}</span>
+	<span id="post_title">{{ page.title }}</span><br/>
+	<span id="post_date">Published by Stephen Chandler "Lyude" Paul on {{ page.date | date: "%A %B %d, %Y" }}</span>
 </div>
 
 {{ content }}
