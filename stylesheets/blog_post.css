@@ -1,0 +1,17 @@
+span.post_title {
+	text-align: left;
+	font-size: x-large;
+}
+
+span.post_date {
+	font-size: small;
+	font-style: italic;
+}
+
+div#blog_comments {
+	padding-top: 5px;
+
+	border-top: 2px;
+	border-top-style: dotted;
+	border-color: #5CB8E6;
+}
