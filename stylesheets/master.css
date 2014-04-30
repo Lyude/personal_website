@@ -82,7 +82,7 @@ div#content_container {
 	width: 928px;
 }
 
-div#content, div#blog_list, div#social_media {
+div.content_box {
 	background-color: #94DBFF;
 	padding-left: 25px;
 	padding-right: 25px;
