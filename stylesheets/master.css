@@ -126,6 +126,11 @@ div#social_media {
 	padding-bottom: 10px;
 }
 
+img.social_media_side_button {
+	width: 93px;
+	height: 93px;
+}
+
 div#blog_list h1 {
 	font-size: 12pt;
 	font-weight: bold;
