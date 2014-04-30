@@ -216,31 +216,3 @@ dt {
 	font-style: bold;
 	color: red;
 }
-
-table, tr, td, th {
-	border: 1px;
-	border-style: solid;
-	border-color: black;
-	border-collapse: collapse;
-	border-spacing: 10px 50px;
-}
-
-table#thinkpad_support td:nth-child(2),
-table#thinkpad_acpi_support td:nth-child(2) {
-	text-align: center;
-}
-
-th {
-	background-color: #4A93B8;
-}
-
-table#thinkpad_support .feat_works, table#thinkpad_acpi_support .feat_works {
-	background-color: LimeGreen;
-}
-table#thinkpad_support .feat_mostly, table#thinkpad_acpi_support .feat_mostly {
-	background-color: Yellow;
-}
-table#thinkpad_support .feat_missing, table#thinkpad_acpi_support .feat_missing {
-	background-color: Red;
-}
-
