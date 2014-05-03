@@ -11,7 +11,7 @@ li:before {
 	padding-right: 5px;
 }
 
-div#navigation {
+nav {
 	width: 100%;
 
 	background: #99CCFF;
@@ -58,10 +58,10 @@ img#logo {
 	position: absolute;
 }
 
-div#navigation a {
+nav a {
 	text-decoration: none;
 }
-div#navigation a:hover {
+nav a:hover {
 	transition-property: border;
 	transition-duration: 0.25s;
 	border-bottom: 10px #C2E0FF solid;
