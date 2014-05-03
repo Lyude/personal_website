@@ -22,7 +22,7 @@ nav {
 	box-shadow: 0px 0px 5px 3px black;
 }
 
-div.navigation_button {
+div.nav_button {
 	height: 62px;
 	display: inline-block;
 
@@ -32,7 +32,7 @@ div.navigation_button {
 	background-color: #3399FF;
 }
 
-a.navigation_button_text {
+a.nav_button_text {
 	position: relative;
 
 	/* Make the link appear to be in the center of the button */
@@ -50,7 +50,7 @@ a.navigation_button_text {
 	font-family: "Noto Sans";
 }
 
-a.navigation_button_text:link, a.navigation_button_text:visited {
+a.nav_button_text:link, a.nav_button_text:visited {
 	color: black;
 }
 
