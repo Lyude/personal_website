@@ -12,6 +12,10 @@ li:before {
 }
 
 nav {
+	/* Make navigation bar scroll with page */
+	top: 0;
+	position: fixed;
+
 	width: 100%;
 
 	background: #99CCFF;
@@ -19,7 +23,24 @@ nav {
 	height: 62px;
 	text-indent: 70px;
 
+}
+
+nav.shadow {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
 	box-shadow: 0px 0px 5px 3px black;
+}
+
+nav.no_shadow {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	box-shadow: 0px 0px 0px 3px #5CB8E6;
 }
 
 div.nav_button {
@@ -55,7 +76,8 @@ a.nav_button_text:link, a.nav_button_text:visited {
 }
 
 img#logo {
-	position: absolute;
+	position: fixed;
+	z-index: 1;
 }
 
 nav a {
@@ -72,7 +94,8 @@ div#content_container {
 	margin: 0 auto;
 	padding-left: 8px;
 	padding-right: 8px;
-	padding-top: 0px;
+	padding-top: 62px;
+
 	/* Because this contains both of of the boxes and keeps them nice and
 	 * snug, this has to be set using the following formula:
 	 * sizeof(div#content) + sizeof(div#blog_list) + (the total padding on
