@@ -8,9 +8,44 @@
 <body>
 	<a href="/index.html"><img id=logo src="/logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
 
+	<nav class="no_shadow">
+		{% for link in site.data.nav_links %}
+			<div class="nav_button"><a class="nav_button_text" href="/{{ link.page }}">{{ link.name }}</a></div>
+		{% endfor %}
+
+		<a href="javascript:smoothScrollToTop();">
+			<svg version="1.1" id="go_to_top" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100">
+				<path class="go_to_top_main_path"
+					d="M70.799,59.599c0.146,0.19,0.219,0.417,0.219,0.645c0,0.225-0.07,0.449-0.213,0.638c-0.286,0.38-0.792,0.522-1.235,0.348
+					l-13.215-5.221v30.594c0,0.585-0.474,1.059-1.059,1.059H44.705c-0.585,0-1.059-0.474-1.059-1.059V56.008l-13.216,5.221
+					c-0.442,0.175-0.948,0.032-1.234-0.348c-0.287-0.38-0.286-0.905,0.006-1.283l19.959-25.96c0.2-0.261,0.51-0.414,0.839-0.414
+					s0.64,0.153,0.84,0.414L70.799,59.599z M79.473,12.339H20.527c-1.104,0-2,0.896-2,2v13.5c0,1.104,0.896,2,2,2h58.945
+					c1.104,0,2-0.896,2-2v-13.5C81.473,13.234,80.577,12.339,79.473,12.339z"/>
+			</svg>
+		</a>
+
+		<noscript>
+			<a href="#">
+				<svg version="1.1" id="go_to_top" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" style="visibility: visible">
+					<path class="go_to_top_main_path"
+					d="M70.799,59.599c0.146,0.19,0.219,0.417,0.219,0.645c0,0.225-0.07,0.449-0.213,0.638c-0.286,0.38-0.792,0.522-1.235,0.348
+					l-13.215-5.221v30.594c0,0.585-0.474,1.059-1.059,1.059H44.705c-0.585,0-1.059-0.474-1.059-1.059V56.008l-13.216,5.221
+					c-0.442,0.175-0.948,0.032-1.234-0.348c-0.287-0.38-0.286-0.905,0.006-1.283l19.959-25.96c0.2-0.261,0.51-0.414,0.839-0.414
+					s0.64,0.153,0.84,0.414L70.799,59.599z M79.473,12.339H20.527c-1.104,0-2,0.896-2,2v13.5c0,1.104,0.896,2,2,2h58.945
+					c1.104,0,2-0.896,2-2v-13.5C81.473,13.234,80.577,12.339,79.473,12.339z"/>
+				</svg>
+			</a>
+		</noscript>
+	</nav>
+
 	<script>
-		window.onscroll = function (e) {
-			if (window.scrollY > 0) {
+		const goToTopButtonAnimationTime = 300;
+
+		goToTopButton = $("#go_to_top");
+		scrollAnimationInProgress = false;
+
+		function toggleNavBarShadow(v) {
+			if (v) {
 				document.getElementsByTagName('nav')[0].classList.remove('no_shadow');
 				document.getElementsByTagName('nav')[0].classList.add('shadow');
 			}
@@ -19,13 +54,44 @@
 				document.getElementsByTagName('nav')[0].classList.add('no_shadow');
 			}
 		}
-	</script>
 
-	<nav class="no_shadow">
-		{% for link in site.data.nav_links %}
-			<div class="nav_button"><a class="nav_button_text" href="/{{ link.page }}">{{ link.name }}</a></div>
-		{% endfor %}
-	</nav>
+		window.onscroll = function() {
+			if (scrollAnimationInProgress)
+				return;
+
+			if (window.scrollY > 0) {
+				toggleNavBarShadow(true);
+				goToTopButton.fadeIn(goToTopButtonAnimationTime)
+			}
+			else {
+				toggleNavBarShadow(false);
+				goToTopButton.fadeOut(goToTopButtonAnimationTime);
+			}
+		}
+
+		window.onload = function () {
+			/* We have the css style for the Go To Top button set to make the button
+			   invisible by default, this makes it so that we don't have to wait for
+			   jQuery to load for the button's visibility status to be updated properly
+			   This here just makes it so that when jQuery loads, we pass over the
+			   responsibility of handling the Go To Top button's visibility to
+			   javascript */
+			goToTopButton.hide();
+			goToTopButton.css("visibility", "visible");
+		}
+
+		function smoothScrollToTop() {
+			goToTopButton.fadeOut(goToTopButtonAnimationTime);
+
+			scrollAnimationInProgress = true;
+			$("html, body").animate({ scrollTop: 0 }, 700);
+
+			setTimeout(function() {
+				toggleNavBarShadow(false);
+				scrollAnimationInProgress = false;
+			}, 700);
+		}
+	</script>
 
 	<div id="content_container">
 		<div id="content" class="content_box">
