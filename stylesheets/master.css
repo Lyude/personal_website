@@ -59,10 +59,20 @@ svg#go_to_top {
 }
 
 svg#go_to_top path {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
 	fill: #E2E9F1; 
 }
 
 svg#go_to_top:hover path {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
 	fill: white;
 }
 
