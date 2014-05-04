@@ -210,9 +210,6 @@ div#footer {
 	font-size: 8pt;
 	color: grey;
 }
-div#footer a:visited {
-	color: blue;
-}
 
 div.box_title_area {
 	margin-left: -25px;
@@ -267,3 +264,22 @@ h3 {
 dt {
 	font-weight: bold;
 }
+
+a:hover {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	color: #0181eb;
+}
+
+a {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	color: #1863a1;
+}
+
