@@ -43,39 +43,6 @@ nav.no_shadow {
 	box-shadow: 0px 0px 0px 3px #5CB8E6;
 }
 
-svg#go_to_top {
-	position: fixed;
-	float: right;
-	display: block;
-
-	top: 5px;
-	right: 0px;
-
-	width: 50px;
-	height: 50px;
-	z-index: 1;
-
-	visibility: hidden;
-}
-
-svg#go_to_top path {
-	-webkit-transition: 300ms;
-	-moz-transition: 300ms;
-	-ms-transition: 300ms;
-	-o-transition: 300ms;
-	transition: 300ms;
-	fill: #E2E9F1; 
-}
-
-svg#go_to_top:hover path {
-	-webkit-transition: 300ms;
-	-moz-transition: 300ms;
-	-ms-transition: 300ms;
-	-o-transition: 300ms;
-	transition: 300ms;
-	fill: white;
-}
-
 div.nav_button {
 	height: 62px;
 	display: inline-block;
@@ -120,6 +87,39 @@ nav a.nav_button_text:hover {
 	transition-property: border;
 	transition-duration: 0.25s;
 	border-bottom: 10px #C2E0FF solid;
+}
+
+svg#go_to_top {
+	position: fixed;
+	float: right;
+	display: block;
+
+	top: 5px;
+	right: 0px;
+
+	width: 50px;
+	height: 50px;
+	z-index: 1;
+
+	visibility: hidden;
+}
+
+svg#go_to_top path {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	fill: #E2E9F1; 
+}
+
+svg#go_to_top:hover path {
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-ms-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	fill: white;
 }
 
 div#content_container {
