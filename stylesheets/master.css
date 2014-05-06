@@ -1,16 +1,5 @@
 @import "fonts.css";
 
-ul {
-	list-style: none;
-	margin-left: -40px;
-}
-
-li:before {
-	content: ">";
-	color: #81A1A1; 
-	padding-right: 5px;
-}
-
 nav {
 	/* Make navigation bar scroll with page */
 	top: 0;
@@ -283,5 +272,16 @@ a {
 	-o-transition: 300ms;
 	transition: 300ms;
 	color: #1863a1;
+}
+
+ul {
+	list-style: none;
+	margin-left: -40px;
+}
+
+li:before {
+	content: ">";
+	color: #81A1A1; 
+	padding-right: 5px;
 }
 
