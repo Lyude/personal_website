@@ -13,22 +13,26 @@ nav {
 	text-indent: 70px;
 }
 
-nav.shadow {
+nav.detached {
 	-webkit-transition: 300ms;
 	-moz-transition: 300ms;
 	-ms-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms;
-	box-shadow: 0px 0px 5px 3px black;
+	
+	box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+	background: rgba(153, 204, 255, 0.75);
 }
 
-nav.no_shadow {
+nav.attached {
 	-webkit-transition: 300ms;
 	-moz-transition: 300ms;
 	-ms-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms;
+
 	box-shadow: 0px 0px 0px 3px rgba(92, 184, 230, 1);
+	background: rgba(153, 204, 255, 1);
 }
 
 div.nav_button {
@@ -37,7 +41,18 @@ div.nav_button {
 
 	text-align: center;
 	text-indent: 0px;
+}
 
+nav.detached a.nav_button_text {
+	color: rgba(0, 0, 0, 1);
+	border-bottom: 10px rgba(0, 51, 102, 0.5) solid;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(153,204,255,1)), color-stop(100%,rgba(0,0,0,0)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
+	background: radial-gradient(ellipse at center, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ccff', endColorstr='#00000000',GradientType=1 );
 }
 
 a.nav_button_text {

@@ -8,7 +8,7 @@
 <body>
 	<a href="/index.html"><img id=logo src="/logo.svg" class="logo" width="70" height="100" alt="lyude.net" /></a>
 
-	<nav class="no_shadow">
+	<nav class="attached">
 		{% for link in site.data.nav_links %}
 			<div class="nav_button"><a class="nav_button_text" href="/{{ link.page }}">{{ link.name }}</a></div>
 		{% endfor %}
@@ -43,24 +43,24 @@
 
 		goToTopButton = $("#go_to_top");
 
-		function toggleNavBarShadow(v) {
+		function toggleNavBarAttached(v) {
 			if (v) {
-				document.getElementsByTagName('nav')[0].classList.remove('no_shadow');
-				document.getElementsByTagName('nav')[0].classList.add('shadow');
+				document.getElementsByTagName('nav')[0].classList.remove('detached');
+				document.getElementsByTagName('nav')[0].classList.add('attached');
 			}
 			else {
-				document.getElementsByTagName('nav')[0].classList.remove('shadow');
-				document.getElementsByTagName('nav')[0].classList.add('no_shadow');
+				document.getElementsByTagName('nav')[0].classList.remove('attached');
+				document.getElementsByTagName('nav')[0].classList.add('detached');
 			}
 		}
 
 		function windowScrollHandler() {
 			if (window.scrollY > 0) {
-				toggleNavBarShadow(true);
+				toggleNavBarAttached(false);
 				goToTopButton.fadeIn(goToTopButtonAnimationTime)
 			}
 			else {
-				toggleNavBarShadow(false);
+				toggleNavBarAttached(true);
 				goToTopButton.fadeOut(goToTopButtonAnimationTime);
 			}
 		}
@@ -88,7 +88,7 @@
 			$("html, body").animate({ scrollTop: 0 }, 700);
 
 			setTimeout(function() {
-				toggleNavBarShadow(false);
+				toggleNavBarAttached(true);
 				window.onscroll = windowScrollHandler;
 			}, 700);
 		}
