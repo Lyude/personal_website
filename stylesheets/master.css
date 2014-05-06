@@ -7,7 +7,7 @@ nav {
 
 	width: 100%;
 
-	background: #99CCFF;
+	background: rgba(153, 204, 255, 1);
 
 	height: 62px;
 	text-indent: 70px;
@@ -29,7 +29,7 @@ nav.no_shadow {
 	-ms-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms;
-	box-shadow: 0px 0px 0px 3px #5CB8E6;
+	box-shadow: 0px 0px 0px 3px rgba(92, 184, 230, 1);
 }
 
 div.nav_button {
@@ -39,7 +39,7 @@ div.nav_button {
 	text-align: center;
 	text-indent: 0px;
 
-	background-color: #3399FF;
+	background-color: rgba(51, 153, 255, 1);
 }
 
 a.nav_button_text {
@@ -55,7 +55,7 @@ a.nav_button_text {
 
 	display: inline-block;
 
-	border-bottom: 10px #003366 solid;
+	border-bottom: 10px rgba(0, 51, 102, 1) solid;
 
 	font-family: "Noto Sans";
 }
@@ -75,7 +75,7 @@ nav a {
 nav a.nav_button_text:hover {
 	transition-property: border;
 	transition-duration: 0.25s;
-	border-bottom: 10px #C2E0FF solid;
+	border-bottom: 10px rgba(194, 224, 255, 1) solid;
 }
 
 svg#go_to_top {
@@ -99,7 +99,7 @@ svg#go_to_top path {
 	-ms-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms;
-	fill: #E2E9F1; 
+	fill: rgba(226, 233, 241, 1); 
 }
 
 svg#go_to_top:hover path {
@@ -128,7 +128,7 @@ div#content_container {
 }
 
 div.content_box {
-	background-color: #94DBFF;
+	background-color: rgba(148, 219, 255, 1);
 	padding-left: 25px;
 	padding-right: 25px;
 
@@ -136,7 +136,7 @@ div.content_box {
 
 	border: 2px solid;
 	border-radius: 10px;
-	border-color: #5CB8E6;
+	border-color: rgba(92, 184, 230, 1);
 
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
@@ -149,13 +149,13 @@ div#content {
 
 	width: 600px;
 
-	background-color: #CAEDFF;
+	background-color: rgba(202, 237, 255, 1);
 
 	background-image: url("/resources/noise.png");
 }
 
 div#content div.box_title_area {
-	background-color: #94DBFF;
+	background-color: rgba(148, 219, 255, 1);
 }
 
 div#blog_list, div#social_media {
@@ -216,7 +216,7 @@ div.box_title_area {
 
 	border-bottom: 2px;
 	border-bottom-style: dotted;
-	border-color: #5CB8E6;
+	border-color: rgb(92, 184, 230);
 }
 div.box_title_area>* {
 	margin-left: 25px;
@@ -226,7 +226,7 @@ div.box_title_area>* {
 }
 
 body {
-	background-color: #1A3366;
+	background-color: rgba(26, 51, 102, 1);
 	font-family: Arial;
 	margin: 0px; /* Let the content containers handle the margins */
 
@@ -262,7 +262,7 @@ a:hover {
 	-ms-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms;
-	color: #0181eb;
+	color: rgba(1, 129, 235, 1);
 }
 
 a {
@@ -271,7 +271,7 @@ a {
 	-ms-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms;
-	color: #1863a1;
+	color: rgba(24, 99, 161, 1);
 }
 
 ul {
@@ -281,7 +281,7 @@ ul {
 
 li:before {
 	content: ">";
-	color: #81A1A1; 
+	color: rgba(129, 161, 161, 1); 
 	padding-right: 5px;
 }
 
