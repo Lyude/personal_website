@@ -42,7 +42,6 @@
 		const goToTopButtonAnimationTime = 300;
 
 		goToTopButton = $("#go_to_top");
-		scrollAnimationInProgress = false;
 
 		function toggleNavBarShadow(v) {
 			if (v) {
@@ -55,10 +54,7 @@
 			}
 		}
 
-		window.onscroll = function() {
-			if (scrollAnimationInProgress)
-				return;
-
+		function windowScrollHandler() {
 			if (window.scrollY > 0) {
 				toggleNavBarShadow(true);
 				goToTopButton.fadeIn(goToTopButtonAnimationTime)
@@ -68,6 +64,8 @@
 				goToTopButton.fadeOut(goToTopButtonAnimationTime);
 			}
 		}
+
+		window.onscroll = windowScrollHandler;
 
 		window.onload = function () {
 			/* We have the css style for the Go To Top button set to make the button
@@ -83,12 +81,15 @@
 		function smoothScrollToTop() {
 			goToTopButton.fadeOut(goToTopButtonAnimationTime);
 
-			scrollAnimationInProgress = true;
+			/* Make sure the shadow doesn't keep changing while
+			   we're running the animation */
+			window.onscroll = null;
+
 			$("html, body").animate({ scrollTop: 0 }, 700);
 
 			setTimeout(function() {
 				toggleNavBarShadow(false);
-				scrollAnimationInProgress = false;
+				window.onscroll = windowScrollHandler;
 			}, 700);
 		}
 	</script>
