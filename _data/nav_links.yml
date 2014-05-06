@@ -9,6 +9,3 @@
 
 - name: Projects
   page: projects.html
-
-- name: Coffee Survey
-  page: coffee_survey.html
