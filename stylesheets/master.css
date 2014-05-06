@@ -161,6 +161,8 @@ div#content {
 	width: 600px;
 
 	background-color: #CAEDFF;
+
+	background-image: url("/resources/noise.png");
 }
 
 div#content div.box_title_area {
