@@ -52,7 +52,6 @@ nav.detached a.nav_button_text {
 	background: -o-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
 	background: -ms-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
 	background: radial-gradient(ellipse at center, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ccff', endColorstr='#00000000',GradientType=1 );
 }
 
 a.nav_button_text {
