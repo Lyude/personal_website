@@ -2,7 +2,7 @@
 	<div class="box_title_area"><h1>Recent Blog Posts</h1></div>
 	<dl>
 		{% for post in site.posts limit:3 %}
-			<dt><a href="{{ post.url }}">{{ post.title }}</a></dd>
+			<dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
 			<dd>{{ post.date | date: "%A %B %d, %Y" }}</dd>
 		{% endfor %}
 	</dl>
