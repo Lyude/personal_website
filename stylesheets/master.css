@@ -46,12 +46,7 @@ div.nav_button {
 nav.detached a.nav_button_text {
 	color: rgba(0, 0, 0, 1);
 	border-bottom: 10px rgba(0, 51, 102, 0.5) solid;
-	background: -moz-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%, rgba(0,0,0,0) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(153,204,255,1)), color-stop(100%,rgba(0,0,0,0)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
-	background: radial-gradient(ellipse at center, rgba(153,204,255,1) 0%,rgba(0,0,0,0) 100%);
+	background: rgba(153,204,255,0.5);
 }
 
 a.nav_button_text {
