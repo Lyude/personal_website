@@ -4,7 +4,7 @@
  */
 const goToTopButtonAnimationTime = 300;
 
-goToTopButton = $("#go_to_top");
+var goToTopButton;
 
 function toggleNavBarAttached(v) {
 	if (v) {
@@ -37,6 +37,7 @@ window.onload = function () {
 	   This here just makes it so that when jQuery loads, we pass over the
 	   responsibility of handling the Go To Top button's visibility to
 	   javascript */
+	goToTopButton = $("#go_to_top");
 	goToTopButton.hide();
 	goToTopButton.css("visibility", "visible");
 }
