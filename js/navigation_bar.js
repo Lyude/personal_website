@@ -20,7 +20,7 @@ function toggleNavBarAttached(v) {
 function windowScrollHandler() {
 	if (window.scrollY > 0) {
 		toggleNavBarAttached(false);
-		goToTopButton.fadeIn(goToTopButtonAnimationTime)
+		goToTopButton.fadeIn(goToTopButtonAnimationTime);
 	}
 	else {
 		toggleNavBarAttached(true);
