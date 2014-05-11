@@ -133,7 +133,7 @@ div#content_container {
 	width: 928px;
 }
 
-div.content_box {
+div.content_box, div.side_content_box {
 	background-color: rgba(148, 219, 255, 1);
 	padding-left: 25px;
 	padding-right: 25px;
@@ -145,6 +145,16 @@ div.content_box {
 	border-color: rgba(92, 184, 230, 1);
 
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+div.side_content_box {
+	float: right;
+	clear: right;
+
+	margin-left: 5px;
+	margin-right: 10px;
+
+	width: 190px;
 }
 
 div#content {
@@ -162,20 +172,6 @@ div#content {
 
 div#content div.box_title_area {
 	background-color: rgba(148, 219, 255, 1);
-}
-
-div#blog_list {
-	float: right;
-	clear: right;
-
-	margin-left: 5px;
-	margin-right: 10px;
-
-	width: 190px;
-}
-
-div#blog_list {
-	clear: right;
 }
 
 div#social_media {
