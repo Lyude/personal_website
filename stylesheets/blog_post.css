@@ -15,3 +15,14 @@ div#blog_comments {
 	border-top-style: dotted;
 	border-color: rgba(92, 184, 230, 1);
 }
+
+div#share_buttons {
+	font-weight: bold;
+	font-size: small;
+	font-style: italic;
+}
+
+div#share_buttons img {
+	width: 7.5mm;
+	height: 7.5mm;
+}

@@ -10,6 +10,17 @@ stylesheet: blog_post.css
 
 {{ content }}
 
+<div id=share_buttons>
+	Share on:<br>
+	<a href="https://twitter.com/share"><img src="/resources/social_network_buttons/twitter.svg" alt="Share on Twitter"/></a>
+	<a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend:'https://lyude.net' | url_encode }}&title={{ page.title | url_encode }}" target="_blank"><img src="/resources/social_network_buttons/facebook.svg" alt="Share on Facebook"></a>
+	<a href="https://plus.google.com/share?url={{ page.url | prepend:'https://lyude.net' | url_encode }}" alt="Share on Google+" target="_blank"><img src="/resources/social_network_buttons/google_plus.svg"></a>
+	<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | prepend:'https://lyude.net' | url_encode }}&title={{ page.title | url_encode }}&source=lyude.net&summary={{ page.excerpt | strip_html | truncate: 256 | url_encode }}"><img src="/resources/social_network_buttons/linkedin.svg" alt="Share on LinkedIn" target="_blank"></a>
+	<a href="http://www.reddit.com/submit?url={{ page.url | prepend:'https://lyude.net' | url_encode }}&title={{ page.title | url_encode }}"><img src="/resources/social_network_buttons/reddit.svg" alt="Share on Reddit"></a>
+	<a href="http://www.stumbleupon.com/submit?url={{ page.url | prepend:'https://lyude.net' | url_encode }}&title={{ page.title | url_encode }}"><img src="/resources/social_network_buttons/stumbleupon.svg"></a>
+	<a href="http://www.tumblr.com/share?v=3&u={{ page.url | prepend:'https://lyude.net' | url_encode }}&t={{ page.title | url_encode }}"><img src="/resources/social_network_buttons/tumblr.svg" alt="Share on Tumblr"></a>
+</div>
+
 <div id="blog_comments">
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
