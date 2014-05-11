@@ -5,7 +5,8 @@ stylesheet: blog_post.css
 
 <div class="box_title_area" style="text-align: left">
 	<span id="post_title">{{ page.title }}</span><br/>
-	<span id="post_date">Published by Stephen Chandler "Lyude" Paul on {{ page.date | date: "%A %B %d, %Y" }}</span>
+	<span id="post_date">Published by Stephen Chandler "Lyude" Paul on {{ page.date | date: "%A %B %d, %Y" }}</span><br>
+	<span id="categories"><span id=opener>Categories:</span> {% for category in page.categories %}{{ category }} {% endfor %}
 </div>
 
 {{ content }}
