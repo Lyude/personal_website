@@ -184,7 +184,26 @@ div#social_media {
 	float: right;
 	text-align: center;
 	padding-top: 6px;
-	padding-right: 7px;
+	padding-right: 5px;
+}
+
+div#social_media.handled_by_js {
+	padding-top: 0;
+	padding-right: 0;
+	display: inline;
+	position: fixed;
+	right: 5px;
+	top: 6px;
+	z-index: 1;
+}
+
+div#social_media.attached {
+	transition: right 300ms;
+}
+
+div#social_media.detached {
+	transition: right 300ms;
+	right: 50px;
 }
 
 div#social_media img {

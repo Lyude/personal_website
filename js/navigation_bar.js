@@ -5,15 +5,22 @@
 const goToTopButtonAnimationTime = 300;
 
 var goToTopButton;
+var socialMediaIcons;
 
 function toggleNavBarAttached(v) {
 	if (v) {
 		document.getElementsByTagName('nav')[0].classList.remove('detached');
 		document.getElementsByTagName('nav')[0].classList.add('attached');
+
+		socialMediaIcons.removeClass("detached");
+		socialMediaIcons.addClass("attached");
 	}
 	else {
 		document.getElementsByTagName('nav')[0].classList.remove('attached');
 		document.getElementsByTagName('nav')[0].classList.add('detached');
+
+		socialMediaIcons.addClass("detached");
+		socialMediaIcons.removeClass("attached");
 	}
 }
 
@@ -31,15 +38,16 @@ function windowScrollHandler() {
 window.onscroll = windowScrollHandler;
 
 window.onload = function () {
-	/* We have the css style for the Go To Top button set to make the button
-	   invisible by default, this makes it so that we don't have to wait for
-	   jQuery to load for the button's visibility status to be updated properly
-	   This here just makes it so that when jQuery loads, we pass over the
-	   responsibility of handling the Go To Top button's visibility to
-	   javascript */
+	socialMediaIcons = $("#social_media");
+	/* In order to ensure the animation of the navigation buttons on the
+	 * right side are smooth, we basically want to make their positions
+	 * absolute, and handle moving them ourselves with javascript
+	 */
 	goToTopButton = $("#go_to_top");
 	goToTopButton.hide();
 	goToTopButton.css("visibility", "visible");
+
+	document.getElementById("social_media").classList.add("handled_by_js");
 }
 
 function smoothScrollToTop() {
