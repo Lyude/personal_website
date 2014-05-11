@@ -90,18 +90,16 @@ nav a.nav_button_text:hover {
 	border-bottom: 10px rgba(194, 224, 255, 1) solid;
 }
 
-svg#go_to_top, svg#go_to_top_fallback {
+svg#go_to_top {
 	float: right;
 	display: block;
 
 	margin-top: 6px;
 	width: 50px;
 	height: 50px;
-
-	visibility: hidden;
 }
 
-svg#go_to_top path, svg#go_to_top_fallback path {
+svg#go_to_top path {
 	-webkit-transition: 300ms;
 	-moz-transition: 300ms;
 	-ms-transition: 300ms;
@@ -110,7 +108,7 @@ svg#go_to_top path, svg#go_to_top_fallback path {
 	fill: rgba(226, 233, 241, 1); 
 }
 
-svg#go_to_top:hover path, svg#go_to_top_fallback:hover path {
+svg#go_to_top:hover path {
 	-webkit-transition: 300ms;
 	-moz-transition: 300ms;
 	-ms-transition: 300ms;

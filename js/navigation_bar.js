@@ -44,8 +44,7 @@ window.onload = function () {
 	 * absolute, and handle moving them ourselves with javascript
 	 */
 	goToTopButton = $("#go_to_top");
-	goToTopButton.hide();
-	goToTopButton.css("visibility", "visible");
+	goToTopButton.css("display", "inline");
 
 	document.getElementById("social_media").classList.add("handled_by_js");
 }
