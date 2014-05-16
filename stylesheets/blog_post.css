@@ -1,19 +1,19 @@
-span#post_title {
+span.post_title {
 	text-align: left;
 	font-size: x-large;
 }
 
-span#post_date {
+span.post_date {
 	font-size: small;
 	font-style: italic;
 }
 
-span#categories {
+span.categories {
 	display: inline;
 	font-size: small;
 }
 
-span#categories span#opener {
+span.categories span.opener {
 	font-weight: bold;
 	font-style: italic;
 }
