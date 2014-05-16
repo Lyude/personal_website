@@ -200,12 +200,12 @@ div#social_media img {
 	height: 50px;
 }
 
-div#blog_list h1 {
+div.side_content_box h1 {
 	font-size: 12pt;
 	font-weight: bold;
 	text-align: left;
 }
-div#blog_list dd {
+div.side_content_box dd {
 	font-size: small;
 	margin-left: 5px;
 }
