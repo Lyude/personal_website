@@ -1,0 +1,8 @@
+---
+layout: default
+stylesheet: blog_index.css
+---
+<div class=box_title_area><h1>Articles under the category "{{ page.category }}"</h1></div>
+<ul>
+	{% for post in page.posts %}{% include post_list.html %}{% endfor %}
+</ul>

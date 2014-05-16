@@ -1,0 +1,1 @@
+../external/category-archive-plugin/_plugins/category_archive_plugin.rb

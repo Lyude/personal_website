@@ -1,3 +1,6 @@
 [submodule "external/URLEncode"]
 	path = external/URLEncode
 	url = https://gist.github.com/919275.git
+[submodule "external/category-archive-plugin"]
+	path = external/category-archive-plugin
+	url = https://github.com/Lyude1337/jekyll-category-archive-plugin.git

@@ -3,3 +3,6 @@ permalink:      /blog/:title.html
 
 kramdown:
         input: GFM
+
+category_archive:
+        path: /blog/category
