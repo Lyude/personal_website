@@ -43,7 +43,15 @@
 			{{ content }}
 		</div>
 
-		{% include blog_list.html %}
+		<div id="blog_list" class="side_content_box">
+			<div class="box_title_area"><h1>Recent Blog Posts</h1></div>
+			<dl>
+				{% for post in site.posts limit:3 %}
+					<dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
+					<dd>{{ post.date | date: "%A %B %d, %Y" }}</dd>
+				{% endfor %}
+			</dl>
+		</div>
 	</div>
 
 {% include footer.html %}
