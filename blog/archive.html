@@ -1,0 +1,11 @@
+---
+title: Blog Archive
+description: "The blog archive of Lyude"
+layout: default
+stylesheet: blog_archive.css
+---
+<div class="box_title_area"><h1>Blog Archive</h1></div>
+<ul>
+	{% for post in site.posts %}{% include post_list.html %}{% endfor %}
+</ul>
+
