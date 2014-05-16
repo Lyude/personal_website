@@ -6,8 +6,6 @@ stylesheet: blog_index.css
 ---
 <div class="box_title_area"><h1>Blog Index</h1></div>
 <ul>
-	{% for post in site.posts %}
-		{% include post_list.html %}
-	{% endfor %}
+	{% for post in site.posts %}{% include post_list.html %}{% endfor %}
 </ul>
 
