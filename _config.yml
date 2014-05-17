@@ -1,5 +1,7 @@
 markdown:       kramdown
 permalink:      /blog/:title.html
+paginate:       5
+paginate_path:  /blog/page:num
 
 kramdown:
         input: GFM

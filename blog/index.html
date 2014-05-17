@@ -1,0 +1,32 @@
+---
+title: Blog
+stylesheet: blog_index.css
+layout: default
+description: Lyude's Blog
+---
+<div class="box_title_area"><h1>Blog</h1></div><br>
+
+{% for post in paginator.posts %}
+	<div class="blog_post">
+		<span class="post_title">{{ post.title }}</span><br/>
+		<span class="post_date">{{ post.date | date: "%A %B %d, %Y" }}</span><br>
+		<span class="categories"><span class=opener>Categories:</span> {% for category in post.categories %}{% categorylink category %}{{ category }}{% endcategorylink %} {% endfor %}</span>
+		{{ post.excerpt }}
+		<a href="{{ post.url }}">Read more…</a>
+	</div>
+{% endfor %}
+<div id="page_navigation">
+	{% if paginator.previous_page_path != nil %}
+		<div id="previous_page"><a href="{{ paginator.previous_page_path }}/index.html">Previous</a></div>
+	{% else %}
+		<div id="previous_page" class="disabled">Previous</div>
+	{% endif %}
+
+	<div id="blog_archive"><a href="/blog/archive.html">Blog Archive</a></div>
+
+	{% if paginator.next_page_path != nil %}
+		<div id="next_page"><a href="{{ paginator.next_page_path }}/index.html">Next</a></div>
+	{% else %}
+		<div id="next_page" class="disabled">Next</div>
+	{% endif %}
+</div>

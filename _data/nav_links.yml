@@ -2,7 +2,7 @@
   page: about.html
 
 - name: Blog
-  page: blog_index.html
+  page: blog/index.html
 
 - name: Work Experience
   page: work.html

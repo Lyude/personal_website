@@ -1,0 +1,34 @@
+@import url("/stylesheets/blog_post.css");
+
+div.blog_post {
+	padding-bottom: 5mm;
+}
+
+div.blog_post p {
+	margin-top: 2mm;
+	margin-bottom: 1.5mm;
+}
+
+div#page_navigation {
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	align-content: center;
+}
+
+div#page_navigation div.disabled {
+	color: gray;
+}
+
+div#previous_page {
+	align-self: flex-start;
+}
+
+div#blog_archive {
+	align-self: center;
+}
+
+div#next_page {
+	align-self: flex-end;
+}
