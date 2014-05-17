@@ -1,6 +1,8 @@
 ---
 title: Lorem Ipsum, The Return
 layout: post
+description: "Lorem Ipsum"
+categories: sample
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget accumsan nibh. Nullam dolor libero, bibendum nec posuere congue, semper vitae lectus. Vivamus venenatis in tortor quis tristique. Maecenas in pellentesque neque, ut lacinia felis. Nam commodo laoreet sollicitudin. Sed ac ante tortor. Fusce in placerat erat.

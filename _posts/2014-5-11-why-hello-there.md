@@ -1,7 +1,11 @@
 ---
 title: Why Hello There!
 layout: post
+description: "Placeholder post for lyude.net"
+categories: sample
 ---
-Hello there! This is just a placeholder post. This website is mostly ready now, although it will be subject to changes in the future (especially since there are still quite a few features I will be adding). In the mean time I don't really have anything to post in my blog yet, but I shall post something when the time comes!
+Hello! This is my new website. As you can see, I have nothing to post on here yet. However, I decided to finally put it up since most of the design is complete.
 
-For now, enjoy the various samples of Lorem Ipsum.
+Eventually there will be real blog posts up on here, and this one will be deleted, along with all the Lorem Ipsum posts.
+
+Cheers!
