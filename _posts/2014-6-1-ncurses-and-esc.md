@@ -17,7 +17,7 @@ By default, this variable is set to 1000 (at least on my system), which is kind 
 {% highlight c %}
 #include <stdlib.h>
 /* … */
-	setenv("ESCDELAY", 25, 0);
+	setenv("ESCDELAY", "25", 0);
 /* … */
 {% endhighlight %}
 
