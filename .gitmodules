@@ -4,3 +4,6 @@
 [submodule "external/category-archive-plugin"]
 	path = external/category-archive-plugin
 	url = https://github.com/Lyude1337/jekyll-category-archive-plugin.git
+[submodule "external/solarized.css"]
+	path = external/solarized.css
+	url = https://gist.github.com/1272660.git

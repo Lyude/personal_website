@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "solarized-dark.css";
 
 nav {
 	/* Make navigation bar scroll with page */
@@ -301,3 +302,11 @@ li:before {
 	padding-right: 5px;
 }
 
+div.highlight {
+	border: 1.5mm solid;
+	border-radius: 1.5mm;
+	padding-left: 1.5mm;
+	padding-right: 1.5mm;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+	background-image: url("/resources/noise.png");
+}
