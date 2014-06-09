@@ -56,7 +56,7 @@
 		<div id="category_list" class="side_content_box">
 			<div class="box_title_area"><h1>Categories</h1></div>
 			<ul>
-				{% for category_array in site.categories %}<li>{% assign category=category_array[0] %}{% categorylink category %}{{ category | capitalize }}{% endcategorylink %}</li>{% endfor %}
+				{% for category in site.categories %}<li>{% categorylink category[0] %}{{ category[0] | capitalize }}{% endcategorylink %}</li>{% endfor %}
 			</ul>
 		</div>
 	</div>
