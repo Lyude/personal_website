@@ -1,6 +1,7 @@
 ---
 title: Adding Drawing Tablet Support in Wayland
 description: "A rundown of my work during the Google Summer of Code in 2014 on adding drawing tablet support to the Wayland protocol"
+excerpt: "When starting my Google Summer of Code project to implement tablet support in Wayland, tablet support in the protocol was literally nonexistent. Various proposals and drafts were made, but none of them had resulted in any code or implementation. To get an idea of the sort of work that was needed for adding tablet support for Wayland, you need to at least have a basic understanding of how input with Wayland compositors works."
 categories: [ "programming" ]
 layout: post
 ---
