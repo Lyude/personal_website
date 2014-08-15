@@ -326,8 +326,12 @@ there, the compositor uses the libinput library to abstract to libevdev, which
 handles working with the evdev device. In this process, frame events are only
 partially preserved; we can still tell which axes were updated in the same
 frame. We can't do the same for buttons or anything else, but most of the time
-this isn't necessary so it isn't an issue. So, the frame event can be used to
-tell whether a series of axis updates were received at the same time or not.
+this isn't necessary so it isn't an issue. We originally planned on doing this
+with buttons and implementing it in libinput so that we could group button
+presses in the same frame as a `proximity_in` event, but button presses are
+usually not sent in the same `EV_SYN` frame. As such, the effort required to
+reproduce some sort of frame for button events wasn't worth the trouble, and we
+decided against implementing it.
 
 The down and up events are rather simple. A down event indicates that the
 tablet tool is now touching the surface of the tablet, and an up event
