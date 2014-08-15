@@ -11,7 +11,7 @@ description: Lyude's Blog
 		<span class="post_title">{{ post.title }}</span><br/>
 		<span class="post_date">{{ post.date | date: "%A %B %d, %Y" }}</span><br>
 		<span class="categories"><span class=opener>Categories:</span> {% for category in post.categories %}{% categorylink category %}{{ category }}{% endcategorylink %} {% endfor %}</span>
-		{{ post.excerpt }}
+		<p>{{ post.excerpt }}</p>
 		<a href="{{ post.url }}">Read more…</a>
 	</div>
 {% endfor %}
