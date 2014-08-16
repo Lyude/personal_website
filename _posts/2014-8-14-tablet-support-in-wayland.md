@@ -11,14 +11,14 @@ What needed to be done
 
 When starting my Google Summer of Code project to implement tablet support in Wayland, tablet support in the protocol was literally nonexistent. Various proposals and drafts were made, but none of them had resulted in any code or implementation. To get an idea of the sort of work that was needed for adding tablet support for Wayland, you need to at least have a basic understanding of how input with Wayland compositors works.
 
-<img src="/resources/blog/wayland_wacom_diagram.svg" alt="Diagram of the Wayland Input Stack" style="width: 5cm"/>
+<img src="/resources/blog/wayland_wacom_diagram.svg" alt="Diagram of the Wayland Input Stack" style="width: 5cm; float: right"/>
 
 It goes like this: first, the kernel receives data from the tablet. This data contains the status of the tablet. This includes the state of all of the buttons, the position of the tool, whether or not the tool is in proximity, and the values of all the axes that the tablet supports; distance, pressure, etc.  Every time the kernel receives this data, it checks if anything has changed since the last update we received from the tablet. If something has changed, the kernel then reports it using the evdev interface. Let's say that we have a very basic tablet device, and we move it from 10, 10 on it's coordinate grid to 100, 100. We'd receive a packet that looks something like this:
 
 ```
-Event: time 1408066625.077063, type 3 (EV_ABS), code 0 (ABS_X), value 100
-Event: time 1408066625.077063, type 3 (EV_ABS), code 1 (ABS_Y), value 100
-Event: time 1408066625.077063, -------------- SYN_REPORT ------------
+type 3 (EV_ABS), code 0 (ABS_X), value 100
+type 3 (EV_ABS), code 1 (ABS_Y), value 100
+-------------- SYN_REPORT ------------
 ```
 
 Every event from evdev has a type, a code, and a value. The type specifies whether the event is a relative axis like the X and Y on an ordinary mouse cursor, an absolute axis like the X and Y coordinates of a finger touching a touch screen, a key event like a keyboard key or a button, or a miscellaneous event like the serial number of a tablet tool, or an `EV_SYN` event. The `SYN_REPORT` you see in the example above is an `EV_SYN` event. These mark the changes of all of the updates we received from the tablet. The next part is the code. This represents which axis, key, button, etc. updated. Then comes the value, which is the current value/state of the of the key, button, or axis, etc.
