@@ -11,7 +11,7 @@ What needed to be done
 
 When starting my Google Summer of Code project to implement tablet support in Wayland, tablet support in the protocol was literally nonexistent. Various proposals and drafts were made, but none of them had resulted in any code or implementation. To get an idea of the sort of work that was needed for adding tablet support for Wayland, you need to at least have a basic understanding of how input with Wayland compositors works.
 
-<img src="/resources/blog/wayland_wacom_diagram.svg"/>
+<img src="/resources/blog/wayland_wacom_diagram.svg" alt="Diagram of the Wayland Input Stack"/>
 
 It goes like this: first, the kernel receives data from the tablet. This data contains the status of the tablet. This includes the state of all of the buttons, the position of the tool, whether or not the tool is in proximity, and the values of all the axes that the tablet supports; distance, pressure, etc.  Every time the kernel receives this data, it checks if anything has changed since the last update we received from the tablet. If something has changed, the kernel then reports it using the evdev interface. Let's say that we have a very basic tablet device, and we move it from 10, 10 on it's coordinate grid to 100, 100. We'd receive a packet that looks something like this:
 
