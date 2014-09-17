@@ -309,4 +309,5 @@ div.highlight {
 	padding-right: 1.5mm;
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 	background-image: url("/resources/noise.png");
+	word-wrap: break-word;
 }
